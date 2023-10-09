@@ -1,0 +1,102 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.galeria {
+  @include m.grid(2, 2rem);
+
+  @include m.desktop {
+    @include m.grid(4, 2rem);
+  }
+
+  .imagen {
+    img {
+      height: 30rem; // impongo un alto.
+      width: 30rem; //impongo un ancho.
+      object-fit: cover; // impongo proporcion.
+      //object-fit solo se puede aplicar en imagenes.
+    }
+
+    @include m.desktop {
+      &:nth-child(1) {
+        grid-row: 1/3;
+
+        img {
+          height: 62rem; // hace mas alta la imagen para que llene las 2 columnas (30rem + 30rem + 2rem de gap).
+          object-position: center; //centra la imagen en las 2 columnas; onject-fit hará que no pierda proporcion.
+        }
+      }
+
+      &:nth-child(2) {
+        grid-column: 2/4;
+
+        img {
+          width: 62rem; // hace mas alta la imagen para que llene las 2 columnas (30rem + 30rem + 2rem de gap).
+          object-position: center; //centra la imagen en las 2 columnas; onject-fit hará que no pierda proporcion.
+        }
+      }
+
+      &:nth-child(4) {
+        grid-row: 2/4;
+
+        img {
+          height: 62rem; // hace mas alta la imagen para que llene las 2 columnas (30rem + 30rem + 2rem de gap).
+          object-position: center; //centra la imagen en las 2 columnas; onject-fit hará que no pierda proporcion.
+        }
+      }
+
+      &:nth-child(5) {
+        grid-column: 3/5;
+
+        img {
+          width: 62rem; // hace mas alta la imagen para que llene las 2 columnas (30rem + 30rem + 2rem de gap).
+          object-position: center; //centra la imagen en las 2 columnas; onject-fit hará que no pierda proporcion.
+        }
+      }
+
+      &:nth-child(6) {
+        grid-column: 3/5;
+
+        img {
+          width: 62rem; // hace mas alta la imagen para que llene las 2 columnas (30rem + 30rem + 2rem de gap).
+          object-position: center; //centra la imagen en las 2 columnas; onject-fit hará que no pierda proporcion.
+        }
+      }
+
+      &:nth-child(7) {
+        grid-row: 3/5;
+
+        img {
+          height: 62rem; // hace mas alta la imagen para que llene las 2 columnas (30rem + 30rem + 2rem de gap).
+          object-position: center; //centra la imagen en las 2 columnas; onject-fit hará que no pierda proporcion.
+        }
+      }
+
+      &:nth-child(8) {
+        grid-column: 2/5;
+
+        img {
+          width: 94rem; // hace mas alta la imagen para que llene las 2 columnas (30rem + 30rem +30 rem + 4rem de gap).
+          object-position: center; //centra la imagen en las 2 columnas; onject-fit hará que no pierda proporcion.
+        }
+      }
+
+      &:nth-child(9) {
+        grid-column: 1/3;
+
+        img {
+          width: 62rem; // hace mas alta la imagen para que llene las 2 columnas (30rem + 30rem + 2rem de gap).
+          object-position: center; //centra la imagen en las 2 columnas; onject-fit hará que no pierda proporcion.
+        }
+      }
+
+      &:nth-child(10) {
+        grid-column: 3/5;
+
+        img {
+          width: 62rem; // hace mas alta la imagen para que llene las 2 columnas (30rem + 30rem + 2rem de gap).
+          object-position: center; //centra la imagen en las 2 columnas; onject-fit hará que no pierda proporcion.
+        }
+      }
+    }
+  }
+}
